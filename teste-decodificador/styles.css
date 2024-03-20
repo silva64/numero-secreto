@@ -1,0 +1,300 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2? family= Krona+One & família= Montserrat:wght@400;600 & display=swap');
+
+:root {
+    --cor0: #DDE6ED;
+    --cor1: #9DB2BF;
+    --cor2: #526D82;
+    --cor3: #27374D;
+    --cor4: #000000;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+  
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    body {
+      background-color: var(--cor4);
+      background-image: url(assets/img/fundo.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      overflow: hidden;
+    } 
+
+    .container {
+      display: flex;
+      position: -ms-page;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      min-height: 100vh;
+      justify-content: space-between;
+    }
+    
+    .texto {
+      position: absolute;
+      width: 42%;
+      height: 38%;
+      left: 10%;
+      top: 20%;
+      padding: 15px;
+      border: none;
+      border-radius: 6%;
+      font-family: var(--fonte-primaria);
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 150%;
+      background-color: var(--cor4);
+      color: var(--cor0);
+      opacity: 0.5;
+    }
+    
+    .regra {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0px;
+      gap: 8px;
+      position: absolute;
+      width: 80%;
+      left: 12%;
+      top: 60%;
+    }
+    
+    .regra p {
+      font-family: var(--fonte-secundaria);
+      font-style: normal;
+      font-size: 13px;
+      line-height: 110%;
+      color: var(--cor1);
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+    
+    .botoes {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0% 0;
+      position: absolute;
+      width: 40%;
+      left: 13%;
+      top: 65%;
+    }
+  
+    .btn-copiar {
+      justify-content: center;
+      padding: 2%;
+      gap: 8px;
+      width: 40%;
+      background-color: var(--cor4);
+      opacity: 0.5;
+      border-radius: 8px;
+      border: 1px solid var(--cor3);
+      font-family: var(--fonte-secundaria);
+      font-size: 11px;
+      line-height: 17px;
+      text-align: center;
+      color: var(--cor0);
+      cursor: pointer;
+  }
+    
+    .btn-criptografar {
+      align-items: center;
+      justify-content: center;
+      padding: 2%;
+      gap: 8px;
+      width: 40%;
+      box-sizing: border-box;
+      flex-direction: row;
+      background: var(--cor4);
+      color: var(--cor0); 
+      border: 1px solid var(--cor3);
+      opacity: 0.5;
+      border-radius: 16px;
+      font-family: var(--fonte-secundaria);
+      font-size: 11px;
+      line-height: 19px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    
+    .btn-descriptografar {
+      align-items: center;
+      justify-content: center;
+      padding: 2%;
+      gap: 8px;
+      width: 40%;
+      box-sizing: border-box;
+      flex-direction: row;
+      background: var(--cor1);
+      color: var(--cor3);
+      border: 1px solid var(--cor3);
+      opacity: 0.5;
+      border-radius: 16px;
+      font-family: var(--fonte-secundaria);
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 19px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .texto::placeholder {
+      color: var(--cor2);
+    }
+
+    .texto:focus,
+    .texto:active {
+      border: none;
+      outline: none;
+    }
+  
+    .btn-copiar:hover {
+      background: var(--cor4);
+      color: var(--cor2);
+      width: 50%;
+      transition: 0.2s;
+    }
+    
+    .btn-descriptografar:hover,
+    .btn-criptografar:hover {
+      margin: 0.1%;
+      width: 50%;
+      padding: 2%;
+    }
+    
+    .criptografado {
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      width: 30%;
+      height: 75%;
+      left: 58%;
+      top: 5%;
+      box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+      border-radius: 32px;
+      overflow: hidden;
+    }
+    
+    .mensagem-criptografado {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1%;
+      gap: 16px;
+      position: absolute;
+      width: 100%;
+      top: 30%;
+      text-align: center;
+    }
+    
+    .mensagem-criptografado h2 {
+      width: 80%;
+      margin: 5%;
+      font-family: var(--fonte-secundaria);
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 120%;
+      text-align: center;
+      color: var(--cor1);
+      border-radius: 16px;
+    }
+    
+    .mensagem-criptografado p {
+      width: 80%;
+      font-family: var(--fonte-secundaria);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 150%;
+      text-align: center;
+      color: var(--cor3);
+    }
+  
+    .lupa {
+      opacity: 0.5;
+      box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+      border-radius: 32px;
+    }
+  
+    .rodape {
+      background: var(--cor4);
+      opacity: 0.5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1%;
+      filter: drop-shadow(10px 7px 10px var(--cor3));
+      margin-top: -100px;
+  }
+  
+  .rodape h3 {
+      font-family: var(--fonte-secundaria);
+      font-size: 20px;
+      color: var(--cor0);
+  }
+  
+  .icons ion-icon {
+    width: 25px;
+    height: 25px;
+    color: var(--cor0);
+    margin: 8px;
+  }
+  
+  .icons ion-icon:hover {
+    width: 25px;
+    height: 25px;
+    color: var(--cor2);
+  }
+
+  @media(max-width: 968px){
+    .texto {
+      display: flexbox;
+      flex-direction: column;
+      width: 60%;
+      height: 30%;
+      left: 20%;
+      top: 10%;
+    }
+
+    .criptografado {
+      display: flexbox;
+      flex-direction: column;
+      width: 60%;
+      height: 30%;
+      left: 20%;
+      top: 50%;
+      padding: 15px;
+      border: none;
+      border-radius: 6%;
+      background-color: var(--cor4);
+      opacity: 0.5;
+    }
+    .mensagem-criptografado {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .botoes {
+      width: 60%;
+      left: 26%;
+      top: 42%;
+    }
+
+    .regra {
+      left: 25%;
+      top: 35%;
+    }
+}
